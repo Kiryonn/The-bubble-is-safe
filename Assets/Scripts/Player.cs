@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour
 {
 	[SerializeField] private float playerSpeed = 8f;
-	[SerializeField] private float rotationSpeed = 0.7f;
+	[SerializeField] private float rotationSpeed = 2f;
 	[SerializeField] private float jumpHeight = 2f;
 	[SerializeField] private float gravityValue = -20f;
 	[SerializeField] private float bufferJumpDistance = 3f;
+	[SerializeField] private GameObject model;
+	[SerializeField] private Animator animator;
 	private CharacterController controller;
 	private Vector3 playerVelocity;
 	private Vector2 moveDirection;
@@ -55,8 +58,15 @@ public class Player : MonoBehaviour
 		controller.Move(playerSpeed * Time.deltaTime * mv);
 		if (mv != Vector3.zero)
 		{
+			animator.SetBool("IsWalking", true);
 			Quaternion targetRotation = Quaternion.LookRotation(mv);
-			gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+			model.transform.rotation = Quaternion.Slerp(model.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+		}
+		else
+		{
+			{
+				animator.SetBool("IsWalking", false);
+			}
 		}
 	}
 
