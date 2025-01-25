@@ -21,7 +21,7 @@ public class DimensionalObject : MonoBehaviour
 	public void SetDimension(Dimension dimension)
 	{
 		currentDimension = dimension;
-		BubbleWorldObject.SetActive(dimension.HasFlag(Dimension.BubbleWorld));
-		NightmareObject.SetActive(dimension.HasFlag(Dimension.Nightmare));
+		BubbleWorldObject.SetActive(dimension == Dimension.BubbleWorld);
+		NightmareObject.SetActive(dimension == Dimension.Nightmare);
 	}
 }

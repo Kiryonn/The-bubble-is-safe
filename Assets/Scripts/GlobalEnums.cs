@@ -1,1 +1,1 @@
-[System.Serializable] [System.Flags] public enum Dimension {BubbleWorld, Nightmare}
+[System.Serializable] public enum Dimension {BubbleWorld, InBetween, Nightmare}

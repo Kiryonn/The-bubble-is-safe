@@ -6,6 +6,10 @@ public class DimensionManager : MonoBehaviour
     public static DimensionManager Instance;
 	public List<DimensionalObject> DimensionalObjects = new();
 
+	public Skybox bubbleWorldSkybox;
+	public Skybox nightmareSkybox;
+	public Skybox InBetweenSkybox;
+
 	private void Awake()
 	{
 		if (Instance == null)
