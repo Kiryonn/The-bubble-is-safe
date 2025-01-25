@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
 	[SerializeField] private float playerSpeed = 8f;
+	[SerializeField] private float rotationSpeed = 0.7f;
 	[SerializeField] private float jumpHeight = 2f;
 	[SerializeField] private float gravityValue = -20f;
 	[SerializeField] private float bufferJumpDistance = 3f;
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
 		// let the player buffer it's jump if he's near the ground
 		return isJumpKeyPressed && (isGrounded || Physics.Raycast(transform.position, Vector3.down, bufferJumpDistance, Physics.DefaultRaycastLayers));
 	}
-	
+
 	private void JumpKeyDown(InputAction.CallbackContext context)
 	{
 		isJumpKeyPressed = true;
@@ -53,7 +54,10 @@ public class Player : MonoBehaviour
 		var mv = new Vector3(moveDirection.x, 0, moveDirection.y);
 		controller.Move(playerSpeed * Time.deltaTime * mv);
 		if (mv != Vector3.zero)
-			gameObject.transform.forward = mv;
+		{
+			Quaternion targetRotation = Quaternion.LookRotation(mv);
+			gameObject.transform.rotation = Quaternion.Slerp(gameObject.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+		}
 	}
 
 	void Update()
