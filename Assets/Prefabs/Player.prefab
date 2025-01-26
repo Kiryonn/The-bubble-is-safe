@@ -702,8 +702,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 119b1968f8df25f42a673afe74715151, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6977943915623576309}
   m_SourcePrefab: {fileID: 100100000, guid: 119b1968f8df25f42a673afe74715151, type: 3}
+--- !u!1 &7208076441259672206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 119b1968f8df25f42a673afe74715151, type: 3}
+  m_PrefabInstance: {fileID: 7550656980225376223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6977943915623576309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208076441259672206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d8d7d033334233a4a93de970af20cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bubble: {fileID: 8017511219711006772}
+  stressGainPerSecBubble: 2
+  stressGainPerSecNightmare: 4
+  maxStress: 100
+  minStress: 0
+  Threshold: 0.5
+  minScale: 0.1
+  maxScale: 1.1
 --- !u!4 &8017511219711006772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 119b1968f8df25f42a673afe74715151, type: 3}

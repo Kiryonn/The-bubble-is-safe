@@ -11,10 +11,13 @@ public class Monster : MonoBehaviour
 	[SerializeField] private Hitbox attackHit;
 	[SerializeField] private Hurtbox hurtbox;
 	[SerializeField] private Health health;
+	[SerializeField] private float moveSpeed = 5f;
+	[SerializeField] private CharacterController characterController;
 	private readonly HashSet<string> animationParametersAvailable = new();
 	private Transform target;
 	private bool inAttackRange = false;
 	private bool canAttack = true;
+	private Vector3 direction;
 
 	private void Start()
 	{
@@ -27,10 +30,8 @@ public class Monster : MonoBehaviour
 
 	private void Update()
 	{
-		if (target != null && !inAttackRange)
-		{
-			Move();
-		}
+		Move();
+		Attack();
 	}
 
 	private void OnEnable()
@@ -62,7 +63,7 @@ public class Monster : MonoBehaviour
 
 	private void Attack()
 	{
-		if (canAttack && inAttackRange)
+		if (target != null && canAttack && inAttackRange)
 		{
 			animator.SetTrigger("Attack");
 			canAttack = false;
@@ -74,10 +75,14 @@ public class Monster : MonoBehaviour
 
 	private void Move()
 	{
-		// Move enemy toward player when in range
-		Vector3 direction = (target.position - transform.position).normalized;
-		transform.position += direction * Time.deltaTime; // Adjust speed as needed
-
+		// wander randomly around spawning point
+		if (target == null)
+			direction = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+		// chase player
+		else
+			direction = (target.position - transform.position).normalized;
+		
+		characterController.Move(direction * moveSpeed * Time.deltaTime);
 		if (animationParametersAvailable.Contains("HorizontalMovement"))
 			animator.SetFloat("HorizontalMovement", direction.x);
 		if (animationParametersAvailable.Contains("VerticalMovement"))

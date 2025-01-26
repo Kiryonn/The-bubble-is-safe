@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa427af4ed0ba449a33affd0e475aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaitTime: 1
+  WaitTime: 1.2
   Autostart: 0
   OneShot: 0
   Timeout:
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa427af4ed0ba449a33affd0e475aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaitTime: 1
+  WaitTime: 0.5
   Autostart: 0
-  OneShot: 0
+  OneShot: 1
   Timeout:
     m_PersistentCalls:
       m_Calls: []
@@ -762,6 +762,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2219292830553907877, guid: 6a4317fc729846d79f69cda980e03f9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8720849381425953702}
+    - targetCorrespondingSourceObject: {fileID: 2219292830553907877, guid: 6a4317fc729846d79f69cda980e03f9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8227422022240622636}
   m_SourcePrefab: {fileID: 100100000, guid: 6a4317fc729846d79f69cda980e03f9d, type: 3}
 --- !u!1 &600291659268853076 stripped
 GameObject:
@@ -831,6 +834,33 @@ MonoBehaviour:
   attackHit: {fileID: 956940299095665856}
   hurtbox: {fileID: 3998632799332697990}
   health: {fileID: 9076432952321225516}
+  moveSpeed: 0
+  characterController: {fileID: 8227422022240622636}
+--- !u!143 &8227422022240622636
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600291659268853076}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &600291659269149044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2219292830553816709, guid: 6a4317fc729846d79f69cda980e03f9d, type: 3}

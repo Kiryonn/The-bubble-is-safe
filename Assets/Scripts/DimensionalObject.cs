@@ -20,10 +20,6 @@ public class DimensionalObject : MonoBehaviour
 
 	public void SetDimension(Dimension dimension)
 	{
-		if (dimension == Dimension.InBetween)
-		{
-			return;
-		}
 		currentDimension = dimension;
 		if (BubbleWorldObject != null)
 			BubbleWorldObject.SetActive(dimension == Dimension.BubbleWorld);
