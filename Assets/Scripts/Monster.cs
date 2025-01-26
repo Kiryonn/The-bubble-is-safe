@@ -10,6 +10,7 @@ public class Monster : MonoBehaviour
 	{
 		detectionSphere.OnAreaEntered.AddListener(DetectedSomething);
 		detectionSphere.OnAreaLeft.AddListener(LostDetection);
+		animator.Play("Idle");
 	}
 
 	private void OnDisable()
