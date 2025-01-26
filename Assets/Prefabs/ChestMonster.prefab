@@ -245,6 +245,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5092800454933957650}
+  - component: {fileID: 7995991158120513243}
+  - component: {fileID: 3998632799332697990}
   m_Layer: 7
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -267,6 +269,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 600291659269149044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7995991158120513243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503147250776609021}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3998632799332697990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503147250776609021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca07ded8c8478fd4a9e7897d7f298759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 9076432952321225516}
 --- !u!1 &2232444296274757109
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,14 +823,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30614c46341e99e4989dd39721133ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionArea: {fileID: 0}
-  attackRange: {fileID: 0}
+  detectionArea: {fileID: 3773515160440105575}
+  attackRange: {fileID: 3141588218109509340}
   attackCooldown: {fileID: 5426409986067426768}
   attackDuration: {fileID: 4457732406361238334}
   animator: {fileID: 600291659276156560}
-  attackHit: {fileID: 0}
-  hurtbox: {fileID: 0}
-  health: {fileID: 0}
+  attackHit: {fileID: 956940299095665856}
+  hurtbox: {fileID: 3998632799332697990}
+  health: {fileID: 9076432952321225516}
 --- !u!4 &600291659269149044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2219292830553816709, guid: 6a4317fc729846d79f69cda980e03f9d, type: 3}

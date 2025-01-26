@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e6c8ca3ba8841e191076baacd2a9ab, type: 3}
   m_Name: ColorSettingsDefault
   m_EditorClassIdentifier: 
-  planetMaterial: {fileID: 2100000, guid: a1a20a7aacd724a5a852c01a741555c2, type: 2}
+  planetMaterial: {fileID: 2100000, guid: 55b9266f4355f41e2937f99467d18d4c, type: 2}
   biomeColourSettings:
     biomes:
     - gradient:
         serializedVersion: 2
-        key0: {r: 0.113945656, g: 0.55744517, b: 0.59489256, a: 1}
-        key1: {r: 0.599114, g: 0.49972185, b: 0.6450792, a: 1}
+        key0: {r: 0.03895871, g: 0.08050524, b: 0.3228177, a: 1}
+        key1: {r: 0.14836861, g: 0.13185437, b: 0.13328992, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -45,13 +45,13 @@ MonoBehaviour:
         m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.5387139, g: 0.7103357, b: 0.7678664, a: 1}
-      startHeight: 0.5063793
-      tintPercent: 0.4650429
+      tint: {r: 0.5792956, g: 0.7868445, b: 0.5923313, a: 1}
+      startHeight: 0.32716674
+      tintPercent: 0.16816664
     - gradient:
         serializedVersion: 2
-        key0: {r: 0.68406326, g: 0.21185814, b: 0.78700686, a: 1}
-        key1: {r: 0.06992244, g: 0.21778291, b: 0.33533695, a: 1}
+        key0: {r: 0.7601722, g: 0.8154439, b: 0.8806635, a: 1}
+        key1: {r: 0.96448684, g: 0.0463564, b: 0.84744483, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -78,9 +78,9 @@ MonoBehaviour:
         m_ColorSpace: -1
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      tint: {r: 0.92378974, g: 0.9105666, b: 0.7642961, a: 1}
-      startHeight: 0.5764981
-      tintPercent: 0.04487872
+      tint: {r: 0.40602785, g: 0.17382538, b: 0.34541532, a: 1}
+      startHeight: 0.9561901
+      tintPercent: 0.17896342
     noise:
       filterType: 0
       simpleNoiseSettings:
