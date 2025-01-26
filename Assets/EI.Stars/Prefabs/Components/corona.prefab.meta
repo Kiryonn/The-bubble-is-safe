@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c9b4b38478894df43af3b5c518ef90b7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166867
+  packageName: EI.Stars - Sun for Universal RP (URP)
+  packageVersion: 1.0
+  assetPath: Assets/EI.Stars/Prefabs/Components/corona.prefab
+  uploadId: 371657

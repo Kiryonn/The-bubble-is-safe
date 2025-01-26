@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7ba6e4dc5673e46a5b9ab6ac0fe3e4fc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166867
+  packageName: EI.Stars - Sun for Universal RP (URP)
+  packageVersion: 1.0
+  assetPath: Assets/EI.Stars/Scripts/LookAtMainCamera.cs
+  uploadId: 371657

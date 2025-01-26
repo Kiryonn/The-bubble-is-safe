@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: 26aafa9c37cff884892bc46b403f5d02
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166867
+  packageName: EI.Stars - Sun for Universal RP (URP)
+  packageVersion: 1.0
+  assetPath: Assets/EI.Stars/Sprites/solar_splash.png
+  uploadId: 371657
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5675236973836422384
+    second: solar_splash02_0
+  - first:
+      213: 25459007664570642
+    second: solar_splash02_1
+  - first:
+      213: -5029423755117358680
+    second: solar_splash02_2
+  - first:
+      213: 982438379902195358
+    second: solar_splash02_3
+  - first:
+      213: -5511235448382694964
+    second: solar_splash02_4
+  - first:
+      213: 5923018906288360180
+    second: solar_splash02_5
+  - first:
+      213: -4446811987662493262
+    second: solar_splash02_6
+  - first:
+      213: -6312961671554722623
+    second: solar_splash02_7
+  - first:
+      213: -3987243486774571345
+    second: solar_splash02_8
+  - first:
+      213: 2781402800077137258
+    second: solar_splash02_9
+  - first:
+      213: -7654567567332842379
+    second: solar_splash02_10
+  - first:
+      213: 6427116147831725637
+    second: solar_splash02_11
+  - first:
+      213: 7776481731646966616
+    second: solar_splash02_12
+  - first:
+      213: -7138657386718680140
+    second: solar_splash02_13
+  - first:
+      213: 8577467985848038273
+    second: solar_splash02_14
+  - first:
+      213: 5559783767934445807
+    second: solar_splash02_15
+  - first:
+      213: -3117883639244855873
+    second: solar_splash02_16
+  - first:
+      213: -8913019136157035830
+    second: solar_splash02_17
+  - first:
+      213: 1202927565518139231
+    second: solar_splash02_18
+  - first:
+      213: 106961642972036381
+    second: solar_splash02_19
+  - first:
+      213: 6384169881900245202
+    second: solar_splash02_20
+  - first:
+      213: -3630356330143008938
+    second: solar_splash02_21
+  - first:
+      213: -9200690340256496578
+    second: solar_splash02_22
+  - first:
+      213: 1198634581764742601
+    second: solar_splash02_23
+  - first:
+      213: -1604318076443533287
+    second: solar_splash02_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 2
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 401
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: solar_splash02_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1631
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013315e7a028d31b0800000000000000
+      internalID: -5675236973836422384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_1
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1631
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2114e2425d27a5000800000000000000
+      internalID: 25459007664570642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_2
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1631
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a19153edb5e33ab0800000000000000
+      internalID: -5029423755117358680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_3
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 1631
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96d7c7508252ad00800000000000000
+      internalID: 982438379902195358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1222
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9db993f882483b0800000000000000
+      internalID: -5511235448382694964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_5
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1222
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa8d33505ac23250800000000000000
+      internalID: 5923018906288360180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_6
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1222
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9ad64be00c942c0800000000000000
+      internalID: -4446811987662493262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_7
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 1222
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c41356aecad368a0800000000000000
+      internalID: -6312961671554722623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 813
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faecfc19c277aa8c0800000000000000
+      internalID: -3987243486774571345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_9
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 813
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65efd33c17899620800000000000000
+      internalID: 2781402800077137258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_10
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 813
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57466e76a5385c590800000000000000
+      internalID: -7654567567332842379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_11
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 813
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54edfa98514b13950800000000000000
+      internalID: 6427116147831725637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bc121feec9beb60800000000000000
+      internalID: 7776481731646966616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_13
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 404
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb2a63dde46eec90800000000000000
+      internalID: -7138657386718680140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_14
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 404
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183f1c010b9490770800000000000000
+      internalID: 8577467985848038273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: solar_splash02_15
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 404
+        width: 410
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe827b341e1582d40800000000000000
+      internalID: 5559783767934445807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      solar_splash02_0: -5675236973836422384
+      solar_splash02_1: 25459007664570642
+      solar_splash02_10: -7654567567332842379
+      solar_splash02_11: 6427116147831725637
+      solar_splash02_12: 7776481731646966616
+      solar_splash02_13: -7138657386718680140
+      solar_splash02_14: 8577467985848038273
+      solar_splash02_15: 5559783767934445807
+      solar_splash02_2: -5029423755117358680
+      solar_splash02_3: 982438379902195358
+      solar_splash02_4: -5511235448382694964
+      solar_splash02_5: 5923018906288360180
+      solar_splash02_6: -4446811987662493262
+      solar_splash02_7: -6312961671554722623
+      solar_splash02_8: -3987243486774571345
+      solar_splash02_9: 2781402800077137258
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

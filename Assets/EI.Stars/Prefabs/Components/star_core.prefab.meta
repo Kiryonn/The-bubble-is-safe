@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f92807cabdb7b6b428a1a1a056bc6443
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166867
+  packageName: EI.Stars - Sun for Universal RP (URP)
+  packageVersion: 1.0
+  assetPath: Assets/EI.Stars/Prefabs/Components/star_core.prefab
+  uploadId: 371657
