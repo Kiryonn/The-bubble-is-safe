@@ -1,0 +1,15 @@
+First install URP latest version and insert the custom pipeline supplied in "Assets\ARTnGAME\EXTRAS\URP Custom Renderer\SettingsETHEREAL" 
+in the Edit -> Project Settings -> Graphics -> Scriptable renderer pipeline settings slot.
+
+Also if have a pipeline assigned in Quality settings, also make sure to change it to the same as the Graphics settings.
+
+Add the script "ConnectSunToVolumeFogURP" to the camera and set the Directional Light of the scene in the "Sun" slot of the script.
+
+Tweak the effect using the script on the camera.
+
+If after install get an error mentioning "not accesible due to protection level", restart Unity to resolve the issue.
+
+For use with Unity 2022.3 LTS, install the "ETHEREAL Unity 2022.3 LTS PATCH 1" and then the "ETHEREAL Unity 2022.3 LTS PATCH 2" patch.
+
+Video tutorials playlist:
+https://www.youtube.com/watch?list=PLJQvoQM6t9GdvknDg470wVngbVAo_WEGo&v=vJIka5aX94o
