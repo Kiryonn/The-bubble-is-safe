@@ -26,6 +26,7 @@ public class Planet : MonoBehaviour
     MeshFilter[] meshFilters;
     TerrainFace[] terrainFaces;
 
+    public Vector3 center = Vector3.zero;
     void Initialize()
     {
         if (shapeSettings == null || colourSettings == null) {
@@ -58,6 +59,7 @@ public class Planet : MonoBehaviour
             meshFilters[i].GetComponent<MeshRenderer>().sharedMaterial = colourSettings.planetMaterial;
 
             terrainFaces[i] = new TerrainFace(shapeGenerator, meshFilters[i].sharedMesh, resolution, directions[i]);
+            meshFilters[i].transform.localPosition = center;
             bool renderFace = faceRenderMask == FaceRenderMask.All || (int)faceRenderMask - 1 == i;
             meshFilters[i].gameObject.SetActive(renderFace);
         }
@@ -65,6 +67,7 @@ public class Planet : MonoBehaviour
 
     public void GeneratePlanet()
     {
+        center = gameObject.transform.position;
         Initialize();
         GenerateMesh();
         GenerateColours();

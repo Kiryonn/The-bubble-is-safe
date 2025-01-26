@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e3706d28872dae643bdd8b77190dd30a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166867
+  packageName: EI.Stars - Sun for Universal RP (URP)
+  packageVersion: 1.0
+  assetPath: Assets/EI.Stars/Prefabs/Components/burst_small_geo.prefab
+  uploadId: 371657

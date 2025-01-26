@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 46fb06205e1aca348987fe337959c7fc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166867
+  packageName: EI.Stars - Sun for Universal RP (URP)
+  packageVersion: 1.0
+  assetPath: Assets/EI.Stars/Materials/Blue_materials/star_core_blue.mat
+  uploadId: 371657

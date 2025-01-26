@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e4b07e2b53b21b94bbeb4d3a79364371
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166867
+  packageName: EI.Stars - Sun for Universal RP (URP)
+  packageVersion: 1.0
+  assetPath: Assets/EI.Stars/Prefabs/Components/burst_large.prefab
+  uploadId: 371657
