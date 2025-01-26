@@ -130,7 +130,7 @@ Material:
     m_Colors:
     - YCutHeightDepthScale: {r: 1, g: 1, b: 0, a: 1}
     - _BlurRadius4: {r: 0.00325, g: 0.00325, b: 0, a: 0}
-    - _CoverageWindOffset: {r: 192188.83, g: 181999.17, b: 0, a: 0}
+    - _CoverageWindOffset: {r: 189196.2, g: 181946.92, b: 0, a: 0}
     - _GroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _InteractTextureAtr: {r: 0.34, g: 0.991, b: 0, a: 1}
     - _InteractTextureOffset: {r: 2557.5, g: 1111, b: 0, a: 0}
@@ -145,7 +145,7 @@ Material:
     - _SunThreshold: {r: 0.87, g: 0.74, b: 0.65, a: 1}
     - _TintColor: {r: 0.9339623, g: 0.3216002, b: 0.3216002, a: 1}
     - _WindDirection: {r: 0.9998477, g: -0.25, b: 0.017452406, a: 0}
-    - _WindOffset: {r: 31112.04, g: -7779.1943, b: 543.0626, a: 0}
+    - _WindOffset: {r: 22134.191, g: -5534.3906, b: 386.35376, a: 0}
     - _WorldSpaceCameraPosC: {r: 0, g: 1, b: -10, a: 0}
     - controlCloudEdgeA: {r: 1, g: 1, b: 1.4, a: 1.75}
     - fogOfWarColor: {r: 0, g: 0, b: 0, a: 0}
