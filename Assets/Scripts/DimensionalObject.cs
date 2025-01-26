@@ -25,8 +25,10 @@ public class DimensionalObject : MonoBehaviour
 			return;
 		}
 		currentDimension = dimension;
-		BubbleWorldObject.SetActive(dimension == Dimension.BubbleWorld);
-		NightmareObject.SetActive(dimension == Dimension.Nightmare);
+		if (BubbleWorldObject != null)
+			BubbleWorldObject.SetActive(dimension == Dimension.BubbleWorld);
+		if (NightmareObject != null)
+			NightmareObject.SetActive(dimension == Dimension.Nightmare);
 	}
 
 	public void ToggleDimension()

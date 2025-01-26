@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
 
 	private void OnEnable()
 	{
+		UpdateHealthBar(health.CurrentHealth);
 		health.OnHealthChanged.AddListener(UpdateHealthBar);
 	}
 

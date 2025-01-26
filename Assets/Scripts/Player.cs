@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 	[SerializeField] private GameObject model;
 	[SerializeField] private Animator animator;
 	[SerializeField] private CinemachineCamera cinemachineCamera;
+	[SerializeField] private Collider[] Weapons;
 	private CharacterController controller;
 	private Vector3 playerVelocity;
 	private Vector2 moveDirection;
@@ -39,26 +40,17 @@ public class Player : MonoBehaviour
 		attack.started += AttackKeyDown;
 		attack.canceled += AttackKeyUp;
 		DimensionManager.Instance.OnDimensionChange.AddListener(OnDimensionChange);
+		SetAttacking(false);
 	}
 
 	private void OnDimensionChange(Dimension dimension)
 	{
-		Debug.Log("Dimension changed to " + dimension);
 		animator.SetBool("IsNightmare", dimension == Dimension.Nightmare);
 	}
 
 	private void JumpKeyDown(InputAction.CallbackContext context)
 	{
-		if (isGrounded)
-		{
-			isJumping = true;
-			jumpBufferCounter = 0;
-		}
-		else
-		{
-			jumpBuffered = true;
-			jumpBufferCounter = bufferJumpTime;
-		}
+		isJumping = true;
 	}
 
 	private void JumpKeyUp(InputAction.CallbackContext context)
@@ -66,36 +58,39 @@ public class Player : MonoBehaviour
 		isJumping = false;
 	}
 
-	private void ApplyJumpBuffer()
+	private void Jump()
 	{
+		if (isGrounded)
+		{
+			if (isJumping || jumpBuffered)
+			{
+				playerVelocity.y += Mathf.Sqrt(jumpHeight * -2f * gravityValue);
+				animator.SetBool("IsJumping", true);
+				jumpBuffered = false;
+			}
+			animator.SetBool("IsJumping", false);
+		}
+		else
+		{
+			animator.SetBool("IsJumping", false);
+			if (isJumping)
+			{
+				jumpBuffered = true;
+				jumpBufferCounter = bufferJumpTime;
+			}
+		}
+
 		if (jumpBuffered)
 		{
 			jumpBufferCounter -= Time.deltaTime;
 			if (jumpBufferCounter <= 0)
-			{
 				jumpBuffered = false;
-			}
-			if (isGrounded)
-			{
-				Jump();
-				jumpBuffered = false;
-			}
-		}
-	}
-
-	private void Jump()
-	{
-		if (isJumping || jumpBuffered)
-		{
-			playerVelocity.y += Mathf.Sqrt(jumpHeight * -2f * gravityValue);
-			jumpBuffered = false;
 		}
 	}
 
 	private void Move()
 	{
 		// Apply gravity
-		playerVelocity.y += gravityValue * Time.deltaTime;
 		moveDirection = move.ReadValue<Vector2>();
 
 		animator.SetFloat("HorizontalMovement", moveDirection.x);
@@ -121,28 +116,29 @@ public class Player : MonoBehaviour
 		controller.Move(playerSpeed * Time.deltaTime * movement);
 	}
 
-	private void AttackKeyDown(InputAction.CallbackContext context)
-	{
-		animator.SetBool("IsAttacking", true);
-	}
+	private void AttackKeyDown(InputAction.CallbackContext context) => SetAttacking(true);
+	private void AttackKeyUp(InputAction.CallbackContext context) => SetAttacking(false);
 
-	private void AttackKeyUp(InputAction.CallbackContext context)
+	private void SetAttacking(bool b)
 	{
-		animator.SetBool("IsAttacking", false);
+		animator.SetBool("IsAttacking", b);
+		foreach (var weapon in Weapons)
+			weapon.enabled = b;
 	}
 
 	void Update()
 	{
+		// Apply gravity
+		playerVelocity.y += gravityValue * Time.deltaTime;
 		isGrounded = controller.isGrounded;
 		animator.SetBool("IsGrounded", isGrounded);
 		if (isGrounded && playerVelocity.y < 0f)
 		{
 			playerVelocity.y = 0f;
 		}
-		ApplyJumpBuffer();
+		Jump();
 		Move();
 
-		// Apply gravity
 		controller.Move(playerVelocity * Time.deltaTime);
 	}
 }
