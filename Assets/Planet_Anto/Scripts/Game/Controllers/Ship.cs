@@ -26,7 +26,7 @@ public class Ship : GravityObject {
 	Quaternion smoothedRot;
 
 	Vector3 thrusterInput;
-	PlayerController pilot;
+	SpacePlayerController pilot;
 	bool shipIsPiloted;
 	int numCollisionTouches;
 	bool hatchOpen;
@@ -149,11 +149,11 @@ public class Ship : GravityObject {
 	}
 
 	public void PilotShip () {
-		pilot = FindObjectOfType<PlayerController> ();
+		pilot = FindObjectOfType<SpacePlayerController> ();
 		shipIsPiloted = true;
-		pilot.Camera.transform.parent = camViewPoint;
-		pilot.Camera.transform.localPosition = Vector3.zero;
-		pilot.Camera.transform.localRotation = Quaternion.identity;
+		pilot.GetComponent<Camera>().transform.parent = camViewPoint;
+		pilot.GetComponent<Camera>().transform.localPosition = Vector3.zero;
+		pilot.GetComponent<Camera>().transform.localRotation = Quaternion.identity;
 		pilot.gameObject.SetActive (false);
 		hatchOpen = false;
 		window.SetActive (false);
