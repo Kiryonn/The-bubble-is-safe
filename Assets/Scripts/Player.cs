@@ -62,16 +62,18 @@ public class Player : MonoBehaviour
 	{
 		if (isGrounded)
 		{
+			animator.SetBool("IsFalling", false);
+			animator.SetBool("IsJumping", false);
 			if (isJumping || jumpBuffered)
 			{
 				playerVelocity.y += Mathf.Sqrt(jumpHeight * -2f * gravityValue);
 				animator.SetBool("IsJumping", true);
 				jumpBuffered = false;
 			}
-			animator.SetBool("IsJumping", false);
 		}
 		else
 		{
+			animator.SetBool("IsFalling", true);
 			animator.SetBool("IsJumping", false);
 			if (isJumping)
 			{

@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd6918720f51104d9024a6a510452f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 0}
+  area: {fileID: 7454327134245861860}
   OnAreaEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd6918720f51104d9024a6a510452f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  area: {fileID: 0}
+  area: {fileID: 4837084571510473819}
   OnAreaEntered:
     m_PersistentCalls:
       m_Calls: []
