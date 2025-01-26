@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DimensionManager : MonoBehaviour
 {
     public static DimensionManager Instance;
 	public List<DimensionalObject> DimensionalObjects = new();
-
+	public UnityEvent<Dimension> OnDimensionChange; 
+	public Dimension currentDimension = Dimension.BubbleWorld;
 	public Skybox bubbleWorldSkybox;
 	public Skybox nightmareSkybox;
 	public Skybox InBetweenSkybox;
@@ -23,44 +25,45 @@ public class DimensionManager : MonoBehaviour
 		}
 	}
 
-	internal void AddDimensionalObject(DimensionalObject dimensionalObject)
+	internal void AddDimensionalObject(DimensionalObject obj)
 	{
-		DimensionalObjects.Add(dimensionalObject);
+		DimensionalObjects.Add(obj);
 	}
 
-	internal void RemoveDimensionalObjects(DimensionalObject dimensionalObject)
+	internal void RemoveDimensionalObjects(DimensionalObject obj)
 	{
-		DimensionalObjects.Remove(dimensionalObject);
+		DimensionalObjects.Remove(obj);
 	}
 
 	public void SetDimension(Dimension dimension)
 	{
-		foreach (var dimensionalObject in DimensionalObjects)
-			dimensionalObject.SetDimension(dimension);
+		foreach (var obj in DimensionalObjects)
+			obj.SetDimension(dimension);
+		OnDimensionChange.Invoke(dimension);
 	}
 
-	public void SetDimension(Dimension dimension, DimensionalObject dimensionalObject)
+	public void SetDimension(Dimension dimension, DimensionalObject obj)
 	{
-		dimensionalObject.SetDimension(dimension);
+		obj.SetDimension(dimension);
 	}
 
 	public void SwitchDimension()
 	{
+		if (currentDimension == Dimension.BubbleWorld)
+			currentDimension = Dimension.Nightmare;
+		else
+			currentDimension = Dimension.BubbleWorld;
 		foreach (var dimensionalObject in DimensionalObjects)
-		{
-			if (dimensionalObject.CurrentDimension == Dimension.BubbleWorld)
-				dimensionalObject.SetDimension(Dimension.Nightmare);
-			else
-				dimensionalObject.SetDimension(Dimension.BubbleWorld);
-		}
+			dimensionalObject.SetDimension(currentDimension);
+		OnDimensionChange.Invoke(currentDimension);
 	}
 
-	public void SwitchDimension(DimensionalObject dimensionalObject)
+	public void SwitchDimension(DimensionalObject obj)
 	{
-		if (dimensionalObject.CurrentDimension == Dimension.BubbleWorld)
-			dimensionalObject.SetDimension(Dimension.Nightmare);
+		if (obj.CurrentDimension == Dimension.BubbleWorld)
+			obj.SetDimension(Dimension.Nightmare);
 		else
-			dimensionalObject.SetDimension(Dimension.BubbleWorld);
+			obj.SetDimension(Dimension.BubbleWorld);
 	}
 
 	public List<DimensionalObject> GetBubbleWorldObjects() => DimensionalObjects.FindAll(dimensionalObject => dimensionalObject.CurrentDimension == Dimension.BubbleWorld);

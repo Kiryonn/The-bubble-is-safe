@@ -1,26 +1,28 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour
 {
 	[SerializeField] private float playerSpeed = 8f;
-	[SerializeField] private float rotationSpeed = 2f;
 	[SerializeField] private float jumpHeight = 2f;
 	[SerializeField] private float gravityValue = -20f;
-	[SerializeField] private float bufferJumpDistance = 3f;
+	[SerializeField] private float bufferJumpTime = 0.1f;
 	[SerializeField] private GameObject model;
 	[SerializeField] private Animator animator;
+	[SerializeField] private CinemachineCamera cinemachineCamera;
 	private CharacterController controller;
 	private Vector3 playerVelocity;
 	private Vector2 moveDirection;
 	private bool isGrounded;
-	private bool isMoving;
 	private bool isJumping;
-	private bool isJumpKeyPressed;
+	private bool jumpBuffered;
+	private float jumpBufferCounter;
+
 	private InputAction move;
 	private InputAction jump;
+	private InputAction attack;
 
 	void Start()
 	{
@@ -29,66 +31,118 @@ public class Player : MonoBehaviour
 		// Get InputAction references from Project-wide input actions.
 		move = InputSystem.actions.FindAction("Player/Move");
 		jump = InputSystem.actions.FindAction("Player/Jump");
+		attack = InputSystem.actions.FindAction("Player/Attack");
 
-		// add event listeners for jump input
+		// Add event listeners
 		jump.started += JumpKeyDown;
 		jump.canceled += JumpKeyUp;
+		attack.started += AttackKeyDown;
+		attack.canceled += AttackKeyUp;
+		DimensionManager.Instance.OnDimensionChange.AddListener(OnDimensionChange);
 	}
 
-	private bool IsJumping()
+	private void OnDimensionChange(Dimension dimension)
 	{
-		// let the player buffer it's jump if he's near the ground
-		return isJumpKeyPressed && (isGrounded || Physics.Raycast(transform.position, Vector3.down, bufferJumpDistance, Physics.DefaultRaycastLayers));
+		Debug.Log("Dimension changed to " + dimension);
+		animator.SetBool("IsNightmare", dimension == Dimension.Nightmare);
 	}
 
 	private void JumpKeyDown(InputAction.CallbackContext context)
 	{
-		isJumpKeyPressed = true;
+		if (isGrounded)
+		{
+			isJumping = true;
+			jumpBufferCounter = 0;
+		}
+		else
+		{
+			jumpBuffered = true;
+			jumpBufferCounter = bufferJumpTime;
+		}
 	}
 
 	private void JumpKeyUp(InputAction.CallbackContext context)
 	{
-		isJumpKeyPressed = false;
+		isJumping = false;
+	}
+
+	private void ApplyJumpBuffer()
+	{
+		if (jumpBuffered)
+		{
+			jumpBufferCounter -= Time.deltaTime;
+			if (jumpBufferCounter <= 0)
+			{
+				jumpBuffered = false;
+			}
+			if (isGrounded)
+			{
+				Jump();
+				jumpBuffered = false;
+			}
+		}
+	}
+
+	private void Jump()
+	{
+		if (isJumping || jumpBuffered)
+		{
+			playerVelocity.y += Mathf.Sqrt(jumpHeight * -2f * gravityValue);
+			jumpBuffered = false;
+		}
 	}
 
 	private void Move()
 	{
+		// Apply gravity
+		playerVelocity.y += gravityValue * Time.deltaTime;
 		moveDirection = move.ReadValue<Vector2>();
-		var mv = new Vector3(moveDirection.x, 0, moveDirection.y);
-		controller.Move(playerSpeed * Time.deltaTime * mv);
-		if (mv != Vector3.zero)
+
+		animator.SetFloat("HorizontalMovement", moveDirection.x);
+		animator.SetFloat("VerticalMovement", moveDirection.y);
+		bool isMoving = moveDirection != Vector2.zero;
+		animator.SetBool("IsWalking", isMoving);
+
+		if (!isMoving)
+			return;
+
+		var cameraForward = cinemachineCamera.transform.forward;
+		var cameraRight = cinemachineCamera.transform.right;
+		// Keep the camera's y rotation only
+		cameraForward.y = 0;
+		cameraRight.y = 0;
+		var movement = (cameraForward * moveDirection.y + cameraRight * moveDirection.x).normalized;
+
+		if (moveDirection.y > 0)
 		{
-			animator.SetBool("IsWalking", true);
-			Quaternion targetRotation = Quaternion.LookRotation(mv);
-			model.transform.rotation = Quaternion.Slerp(model.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+			transform.rotation = Quaternion.Slerp(model.transform.rotation, Quaternion.LookRotation(movement), Time.deltaTime * 10f);
 		}
-		else
-		{
-			{
-				animator.SetBool("IsWalking", false);
-			}
-		}
+
+		controller.Move(playerSpeed * Time.deltaTime * movement);
+	}
+
+	private void AttackKeyDown(InputAction.CallbackContext context)
+	{
+		animator.SetBool("IsAttacking", true);
+	}
+
+	private void AttackKeyUp(InputAction.CallbackContext context)
+	{
+		animator.SetBool("IsAttacking", false);
 	}
 
 	void Update()
 	{
 		isGrounded = controller.isGrounded;
-		if (isGrounded)
+		animator.SetBool("IsGrounded", isGrounded);
+		if (isGrounded && playerVelocity.y < 0f)
 		{
-			if (playerVelocity.y < 0f)
-			{
-				playerVelocity.y = 0f;
-			}
-			if (IsJumping())
-			{
-				playerVelocity.y += Mathf.Sqrt(jumpHeight * -2f * gravityValue);
-				isJumpKeyPressed = false;
-			}
+			playerVelocity.y = 0f;
 		}
-		playerVelocity.y += gravityValue * Time.deltaTime;
+		ApplyJumpBuffer();
 		Move();
 
-		// gravity
+		// Apply gravity
 		controller.Move(playerVelocity * Time.deltaTime);
 	}
 }

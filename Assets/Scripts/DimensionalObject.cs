@@ -20,8 +20,17 @@ public class DimensionalObject : MonoBehaviour
 
 	public void SetDimension(Dimension dimension)
 	{
+		if (dimension == Dimension.InBetween)
+		{
+			return;
+		}
 		currentDimension = dimension;
 		BubbleWorldObject.SetActive(dimension == Dimension.BubbleWorld);
 		NightmareObject.SetActive(dimension == Dimension.Nightmare);
+	}
+
+	public void ToggleDimension()
+	{
+		SetDimension(currentDimension == Dimension.BubbleWorld ? Dimension.Nightmare : Dimension.BubbleWorld);
 	}
 }
