@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6001270351578964239
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FullVolumeCloudsSRP_FORWARD_URP LAYERS_FOGWAR
+  m_Shader: {fileID: 4800000, guid: 2284a2b4d70a87443a3037d4746fb76d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - RANDOM_UNIT_SPHERE
+  m_InvalidKeywords:
+  - ALLOW_IN_CLOUDS
+  - DEBUG_NO_HIGH_FREQ_NOISE
+  - FOG_EXP2
+  - RANDOM_JITTER_BLUE
+  - RANDOM_JITTER_WHITE
+  - SLOW_LIGHTING
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CloudTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CloudTexP:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _InteractTexture:
+        m_Texture: {fileID: 2800000, guid: 8034f877ef030f349ab31957981eb9ca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex1:
+        m_Texture: {fileID: 11728776, guid: 55d13c99b6ca7784c826ce91e1601a66, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex2:
+        m_Texture: {fileID: 11760204, guid: 98212a46d86526e438f4a8edce718743, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SkyTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _maskTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - ClearSkyFac: 2.93
+    - FogSky: 1
+    - _Altitude0: 2500
+    - _Altitude1: 4500
+    - _AtmosphereThickness: 1.39
+    - _BackShade: 0.45
+    - _Close: 0
+    - _Coverage: -0.28999996
+    - _Exposure: 11
+    - _Extinct: 0.025
+    - _FadeThreshold: 0
+    - _Far: 11111
+    - _FarDist: 70000
+    - _HGCoeff: 0.05
+    - _HorizonYAdjust: 1111
+    - _HorizonZAdjust: 0
+    - _NearZCutoff: 1111
+    - _NoiseAmp1: -2.3
+    - _NoiseAmp2: 1.77
+    - _NoiseBias: 0.38
+    - _NoiseFreq1: 3.96
+    - _NoiseFreq2: 31.28
+    - _SampleCount0: 2
+    - _SampleCount1: 85
+    - _SampleCountL: 6
+    - _Scatter: 0.83
+    - _SunSize: 0.05
+    - _TemporalGain: 1
+    - _TemporalResponse: 1
+    - _UndersideCurveFactor: 0.29
+    - _WeatherScale: 0.00000275
+    - _WindSpeed: 5400
+    - _alphaFactor: 0.5
+    - _fastest: 0
+    - _invertRay: 1
+    - _invertX: 0
+    - _mobileFactor: 1
+    - cameraScale: 1
+    - controlBackAlphaPower: 0.21
+    - controlCloudAlphaPower: 0.001
+    - controlCloudEdgeOffset: 1
+    - depthDilation: 0
+    - extendFarPlaneAboveClouds: 0.4
+    - fogOfWarRadius: 0
+    - turbidity: 21
+    - varianceAltitude1: -0.15
+    m_Colors:
+    - YCutHeightDepthScale: {r: 1, g: 1, b: 0, a: 1}
+    - _BlurRadius4: {r: 0.00325, g: 0.00325, b: 0, a: 0}
+    - _CoverageWindOffset: {r: 192188.83, g: 181999.17, b: 0, a: 0}
+    - _GroundColor: {r: 1, g: 1, b: 1, a: 0}
+    - _InteractTextureAtr: {r: 0.34, g: 0.991, b: 0, a: 1}
+    - _InteractTextureOffset: {r: 2557.5, g: 1111, b: 0, a: 0}
+    - _InteractTexturePos: {r: 1, g: 1, b: -1222, a: -1222}
+    - _LocalLightColor: {r: 0, g: 0, b: 0, a: 0}
+    - _LocalLightPos: {r: -53064.227, g: 195220.05, b: 102094.52, a: 200000}
+    - _Scroll1: {r: 0, g: 0, b: 0, a: 0}
+    - _Scroll2: {r: 0, g: 0, b: 0, a: 0}
+    - _SkyTint: {r: 2.43, g: 4.76, b: 7.3, a: 0}
+    - _SunColor: {r: 0.41509432, g: 0.40491277, b: 0.40491277, a: 1}
+    - _SunPosition: {r: 111.00003, g: 11.000001, b: 339.0001, a: 11}
+    - _SunThreshold: {r: 0.87, g: 0.74, b: 0.65, a: 1}
+    - _TintColor: {r: 0.9339623, g: 0.3216002, b: 0.3216002, a: 1}
+    - _WindDirection: {r: 0.9998477, g: -0.25, b: 0.017452406, a: 0}
+    - _WindOffset: {r: 31112.04, g: -7779.1943, b: 543.0626, a: 0}
+    - _WorldSpaceCameraPosC: {r: 0, g: 1, b: -10, a: 0}
+    - controlCloudEdgeA: {r: 1, g: 1, b: 1.4, a: 1.75}
+    - fogOfWarColor: {r: 0, g: 0, b: 0, a: 0}
+    - playerPos: {r: -241.2464, g: 3321.5679, b: -2658.6443, a: 340}
+    - specialFX: {r: 0, g: 1, b: 1, a: 0}
+    - superCellControlsA: {r: 0, g: 0, b: 0, a: 0}
+    - v3LightDir: {r: -0.64719886, g: 0.66446334, b: 0.3736606, a: 0}
+    - v3LightDirFOG: {r: -0.12151948, g: -0.40882936, b: 0.9044844, a: 1}
+    - vortexControlsA: {r: 1, g: 1, b: 1, a: 1}
+    - vortexPosRadius: {r: 0, g: 0, b: 0, a: 1000}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

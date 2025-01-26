@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: d3eb2d7240d177946972fcee4780c61e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sunLight: {instanceID: 0}
+  - maskTexture: {instanceID: 0}
+  - maskHistoryTexture: {instanceID: 0}
+  - topDownMaskCamera: {instanceID: 0}
+  - maskMat: {instanceID: 0}
+  - playerPos: {instanceID: 0}
+  - shadowsMaterial: {instanceID: 0}
+  - WeatherTexture: {fileID: 2800000, guid: bc830ae7850741344b2f0b6671d6de80, type: 3}
+  - blueNoiseTexture: {fileID: 2800000, guid: d25158ef7a361f6409bbeb2b86bb2118, type: 3}
+  - curlNoise: {fileID: 2800000, guid: 633d2619a5d02fe4c85ebd22e657ff6a, type: 3}
+  - lowFreqNoise: {fileID: 4900000, guid: be65ce5dc09da374c9ea55a4334c18c8, type: 3}
+  - highFreqNoise: {fileID: 4900000, guid: 344714213bf2a4f419bad2005e3d2622, type: 3}
+  - cloudsHighTexture: {fileID: 2800000, guid: bf87dcae3002f3e43981f196406e7424, type: 3}
+  - reflectCamera: {instanceID: 0}
+  - sun: {instanceID: 0}
+  - backgroundCam: {instanceID: 0}
+  - backgroundMat: {instanceID: 0}
+  - testTex: {instanceID: 0}
+  - testTex2: {instanceID: 0}
+  - localLight: {instanceID: 0}
+  - _InteractTexture: {instanceID: 0}
+  - _NoiseTex1: {fileID: 11760204, guid: b6d6f79c2d3ef3241a9948dd089967d1, type: 2}
+  - _NoiseTex2: {fileID: 11728776, guid: 4676a0d39df38b84cad914e1e3eadeda, type: 2}
+  - localLightA: {instanceID: 0}
+  - noiseTexture: {fileID: 2800000, guid: d25158ef7a361f6409bbeb2b86bb2118, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
